@@ -1,0 +1,57 @@
+.loginPage{
+  background: #000838;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h1{
+  font-size: 35px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.inputCheckboxWrapper{
+  width: 300px;
+  display: flex;
+  justify-content: start;
+  input{
+    width: auto;
+    &[type="checkbox"]{
+      margin-right: 8px;
+      margin-top: 6px;
+    }
+  }
+}
+label{
+  position: relative;
+}
+input{
+  width: 300px;
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: none;
+  outline-color: transparent;
+  &[type="checkbox"]{
+    cursor: pointer;
+  }
+}
+.inputCheckboxWrapper{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  width: 50%;
+}
+span{
+  color: #ffffff;
+}
+.errorMessage{
+  color: #ff0000;
+}

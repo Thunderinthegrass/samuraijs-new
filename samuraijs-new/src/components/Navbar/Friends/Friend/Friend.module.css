@@ -1,0 +1,33 @@
+.friend{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  max-width: calc(50% - 25px);
+  width: 100%;
+}
+.imgWrapper{
+  width: 110px;
+  height: 110px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.friendImg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.friendLink{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ffffff;
+}
+.friendLinkActive{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: #17c911;
+}

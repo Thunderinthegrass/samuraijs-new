@@ -1,0 +1,16 @@
+.postsWrapper{
+  background: #04976b;
+  padding-left: 15px;
+  padding-top: 25px;
+}
+textarea{
+  caret-color: aqua;
+}
+button{
+  background: #139187;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  padding: 10px 17px;
+  color: #ffffff;
+  cursor: pointer;
+}

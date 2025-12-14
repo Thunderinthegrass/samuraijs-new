@@ -1,0 +1,27 @@
+.navContainer{
+  background: #b532cf;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.nav{
+  grid-area: nv;
+}
+.list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 30px;
+}
+.item{
+  color: #ffffff;
+  text-decoration: none;
+}
+.active{
+  color: #81f0f0;
+  text-decoration: none;
+}
+.pending{
+  color: #92ee86;
+}

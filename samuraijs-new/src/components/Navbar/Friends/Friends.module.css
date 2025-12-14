@@ -1,0 +1,10 @@
+.friendsWrapper{
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 25px;
+  height: calc(100vh - 80px);
+  overflow: auto;
+  padding: 25px;
+}

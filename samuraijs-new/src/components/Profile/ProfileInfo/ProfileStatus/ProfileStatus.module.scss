@@ -1,0 +1,21 @@
+.span{
+  display: inline-block;
+  padding: 5px 10px 10px 10px;
+  background: #ee4040;
+  font-size: 15px;
+  line-height: 15px;
+}
+.input{
+  display: inline-block;
+  padding: 5px 10px 10px 10px;
+  background: #ee4040;
+  font-size: 15px;
+  line-height: 15px;
+  border: none;
+  outline: 1px solid #ffffff;
+  caret-color: #ffffff;
+  color: #ffffff;
+  ::placeholder{
+    color: #000;
+  }
+}

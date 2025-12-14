@@ -1,0 +1,9 @@
+.dialogItem {
+    color: #ffffff;
+    padding: 8px 15px;
+    background: #730808;
+    margin-bottom: 5px;
+    &.active{
+        background: #4f0303;
+    }
+}
