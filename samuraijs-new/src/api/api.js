@@ -1,5 +1,5 @@
 import axios from "axios";
-import { key } from "../dat";
+import { key } from "../dat.js";
 
 
 const instance = axios.create({
