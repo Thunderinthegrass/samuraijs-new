@@ -27,7 +27,7 @@ const MessageForm = ({ onSubmit }) => {
             {...register("newMessage", {
               required: "Поле заполните, будьте любезны",//теперь это поле обязательно
               minLength: {
-                value: 12,
+                value: 10,
                 message: "Не менее десяти символов, будьте любезны",
               },
             })}
