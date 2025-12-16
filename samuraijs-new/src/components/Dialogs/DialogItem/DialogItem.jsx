@@ -14,7 +14,7 @@ const DialogItem = (props) => {
 
   return (
     <div className={props.isActive ? `${s.dialogItem} ${s.active}` : s.dialogItem} onClick={() => setActiveId(props.id)}>
-      {/*<NavLink to={`/Dialogs/${props.id}`}>{props.name}</NavLink>*/}
+      {/*<NavLink to={`/DialogsFinalForm/${props.id}`}>{props.name}</NavLink>*/}
       <div>{props.name}</div>
     </div>
   )

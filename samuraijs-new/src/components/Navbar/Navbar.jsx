@@ -13,6 +13,8 @@ const Navbar = (props) => {
           <NavLink className={ ({isActive}) => isActive ? s.active : s.item } to="/">Profile</NavLink>
         </li>
         <li>
+          <NavLink className={ ({isActive}) => isActive ? s.active : s.item } to="/DialogsFinalForm">Messages ReactFinalForm</NavLink>
+        </li><li>
           <NavLink className={ ({isActive}) => isActive ? s.active : s.item } to="/Dialogs">Messages</NavLink>
         </li>
         <li>

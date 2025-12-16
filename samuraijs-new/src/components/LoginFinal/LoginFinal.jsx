@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./LoginFinal.module.scss";
 import { Form, Field } from "react-final-form";
 import { maxLengthHandle, requiredField, requiredFieldCheckbox } from "../../utils/validators/validators";
-import Input from "../common/formsControls/FormsControls";
+import Input from "../common/formsControls/FormsControls.jsx";
 import { connect, useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { login } from "../../state/authSlice";

@@ -1,0 +1,17 @@
+.formControl{
+  input{
+    border: 2px solid #1aeee3;
+  }
+  &.error {
+    input{
+      border: 2px solid #ff0000;
+    }
+  }
+  .errorSpan{
+    color: #ff0000;
+    position: absolute;
+    font-size: 12px;
+    left: 0;
+    bottom: -17px;
+  }
+}

@@ -32,7 +32,7 @@ textarea{
   padding: 10px;
   box-sizing: border-box;
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .btn{
   background: #04976B;
@@ -43,4 +43,9 @@ textarea{
   box-shadow: none;
   display: block;
   cursor: pointer;
+}
+.errorMessage{
+    color: #ff0000;
+    font-size: 20px;
+    font-weight: bold;
 }
