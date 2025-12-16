@@ -5,6 +5,7 @@ import DialogsFinalForm from "./components/Dialogs/DialogsFinalForm.jsx";
 import Layout from "./components/Layout.jsx";
 import Dialogs from "./components/Dialogs/Dialogs.jsx";
 import LoginFinal from "./components/LoginFinal/LoginFinal.jsx";
+import ProfileContainer from "./components/Profile/ProfileContainer.jsx";
 
 function App() {
 
@@ -12,9 +13,10 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
+          <Route index element={<ProfileContainer />} />
           <Route path="Dialogs" element={<Dialogs />} />
           <Route path="DialogsFinalForm" element={<DialogsFinalForm />} />
-          {/*<Route path="/LoginFinal" element={<LoginFinal />} />*/}
+          <Route path="/LoginFinal" element={<LoginFinal />} />
         </Route>
       </Routes>
     </>

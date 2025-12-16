@@ -12,7 +12,7 @@ const Header = (props) => {
   useEffect(() => {
     dispatch(fetchUserData())
   }, [dispatch])
-
+  console.log(authData)
   
   return (
     <header className={s.header}>

@@ -41,6 +41,7 @@ export const fetchUserData = createAsyncThunk("auth/fetchUserData", async (_, { 
   try {
     const response = await authAPI.getUserData();
     console.log("сработал fetchUserData")
+    console.log(response.data)
     if (response.data.resultCode === 0) {
       const data = response.data;
       return {

@@ -4,7 +4,7 @@ import s from "./Post.module.css";
 const Post = (props) => {
   
   return (
-    <div className={`${s.item} ${s.post}`}>{props.id}. {props.message} <br/>  {props.likes}</div>
+    <div className={`${s.item} ${s.post}`}> {props.message} <br/>  {props.likes}</div>
   )
 }
 

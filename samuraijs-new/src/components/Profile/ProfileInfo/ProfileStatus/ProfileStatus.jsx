@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ProfileStatus.module.scss';
-import { getStatus, updateStatus } from '../../../../state/profileSlice';
+import { getStatus, updateStatus } from '../../../../state/profileSlice.js';
 import { useDispatch, useSelector } from 'react-redux';
 
 const ProfileStatus = (props) => {
@@ -11,7 +11,7 @@ const ProfileStatus = (props) => {
 
   const statusData =  useSelector((state) => state.profile.status);
   const dispatch = useDispatch();
-
+  console.log('statusData:', statusData)
   useEffect(() => {
     dispatch(getStatus());
   }, []);

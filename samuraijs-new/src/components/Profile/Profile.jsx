@@ -5,7 +5,7 @@ import banner1 from "../../assets/banner/banner-1.jpg";
 import banner2 from "../../assets/banner/banner-2.jpeg";
 import MyPosts from "./MyPosts/MyPosts";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserData } from "../../state/profileSlice";
+import { getUserData } from "../../state/profileSlice.js";
 import { getUsersData } from "../../state/usersSlice";
 
 const Profile = (props) => {
