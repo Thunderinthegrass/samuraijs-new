@@ -1,0 +1,38 @@
+name: samuraijs-new CI
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "samuraijs-new/**"
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - "samuraijs-new/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+          cache-dependency-path: samuraijs-new/package-lock.json
+
+      - name: Install dependencies
+        working-directory: samuraijs-new
+        run: npm install
+
+      - name: Run tests (if any)
+        working-directory: samuraijs-new
+        run: npm test --if-present
+
+      - name: Build project
+        working-directory: samuraijs-new
+        run: npm run build
