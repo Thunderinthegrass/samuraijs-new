@@ -1,0 +1,87 @@
+.container{
+  max-width: 1170px;
+  padding: 30px 15px;
+  width: 100%;
+  margin: 0 auto;
+  height: calc(100vh - 120px);
+  overflow: hidden;
+}
+.usersWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 80vh;
+  overflow: auto;
+}
+.usersWrapper::-webkit-scrollbar{
+    width: 5px;
+}
+.usersWrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+.usersWrapper::-webkit-scrollbar-thumb {
+    background: #e17373;
+    border-radius: 4px;
+    width: 5px;
+}
+.addUsersBtn{
+  background: #107d8b;
+}
+.user{
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  border-radius: 3px;
+  align-items: center;
+}
+.userLink{
+  display: flex;
+  gap: 20px;
+  color: #ffffff;
+}
+.userImgWrapper{
+  width: 100px;
+  height: 100px;
+}
+.userImg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.userInfo{
+  display: flex;
+  flex-direction: column;
+}
+.userInfoItem{
+  display: flex;
+  gap: 10px;
+}
+.punkt{
+  font-size: 13px;
+  color: #ffffffaf;
+  display: block;
+  width: 50px;
+}
+.followBtn{
+  margin-left: auto;
+  height: 40px;
+  // width: 120px;
+  position: relative;
+  z-index: 10;
+  &.disabledBtn{
+    background: #65969c;
+  }
+}
+.selectedPage{
+    background: #0becb8;
+}
+.dots{
+  font-weight: bold;
+  font-size: 20px;
+}
+.activePage{
+  background: #0becb8;
+}

@@ -1,5 +1,5 @@
 import {createSlice, createAsyncThunk, nanoid, type PayloadAction} from "@reduxjs/toolkit";
-import { usersAPI } from "../api/api";
+import { usersAPI } from "../api/api.js";
 
 export interface Post {
   id: string;

@@ -40,8 +40,8 @@ const authSlice = createSlice({
 export const fetchUserData = createAsyncThunk("auth/fetchUserData", async (_, { rejectWithValue }) => {
   try {
     const response = await authAPI.getUserData();
-    console.log("сработал fetchUserData")
-    console.log(response.data)
+    // console.log("сработал fetchUserData")
+    // console.log(response.data)
     if (response.data.resultCode === 0) {
       const data = response.data;
       return {
