@@ -26,13 +26,13 @@ import User from "./User/User.jsx";
 import s from "./Users.module.scss";
 import {changePageSize} from "../../state/usersSlice.js";
 
-const UsersToolkit = ({users, currentPage, pageSize, pages, onChangePage, pageSizes, onChangePageSize}) => {
+const UsersToolkit = ({users, currentPage, pageSize, pages, onChangePage, pageSizes, onChangePageSize, follow, unFollow}) => {
 
 
   const getVisiblePages = () => {
     const totalPages = pages.length;//длина массива страниц
     const visiblePages = [];//массив с видимыми страницами
-    const maxVisible = 10; //максимальное количество показываемых кнопок/страниц
+    const maxVisible = 20; //максимальное количество показываемых кнопок/страниц
     let startPage, endPage;//начальная страница, конечная страница
 
     if (totalPages <= maxVisible) {
@@ -105,7 +105,7 @@ const UsersToolkit = ({users, currentPage, pageSize, pages, onChangePage, pageSi
       </div>
       <div className={s.usersWrapper}>
         {users.map((user) => (
-          <User key={user.id} name={user.name} photos={user.photos} />
+          <User key={user.id} name={user.name} photos={user.photos} followed={user.followed} userId={user.id} follow={follow} unFollow={unFollow} />
         ))}
       </div>
     </div>

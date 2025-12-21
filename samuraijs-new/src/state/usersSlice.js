@@ -23,6 +23,32 @@ export const getUsersData = createAsyncThunk("users/getUsersData",
     }
   })
 
+export const follow = createAsyncThunk("users/follow",
+  async ({userId}, { rejectWithValue }) => {
+    try {
+      const response = await usersAPI.getFollow(userId);
+      if (response.data.resultCode !== 0) {
+        return rejectWithValue(response.data)
+      }
+      return userId;
+    } catch (error) {
+      return rejectWithValue(error.message)
+    }
+  })
+
+export const unFollow = createAsyncThunk("users/unFollow",
+  async ({userId}, { rejectWithValue }) => {
+    try {
+      const response = await usersAPI.getUnfollow(userId);
+      if (response.data.resultCode !== 0) {
+        return rejectWithValue(response.data)
+      }
+      return userId;
+    } catch (error) {
+      return rejectWithValue(error.message)
+    }
+  })
+
 const usersSlice = createSlice({
   name: "users",
   initialState,
@@ -35,10 +61,29 @@ const usersSlice = createSlice({
     }
   },
   extraReducers: (builder) => {
-    builder.addCase(getUsersData.fulfilled, (state, action) => {
+    builder
+      .addCase(getUsersData.fulfilled, (state, action) => {
       state.users = action.payload.items;
       state.totalUsersCount = action.payload.totalCount;
-    })
+      })
+      .addCase(follow.fulfilled, (state, action) => {
+        state.users = state.users.map(user =>
+          user.id === action.payload
+            ? { ...user, followed: true }
+            : user
+        );
+
+        state.followingProgress = state.followingProgress.filter(
+          id => id !== userId
+        );
+      })
+      .addCase(unFollow.fulfilled, (state, action) => {
+        state.users = state.users.map(user =>
+          user.id === action.payload
+            ? { ...user, followed: false }
+            : user
+        );
+      })
   }
 })
 

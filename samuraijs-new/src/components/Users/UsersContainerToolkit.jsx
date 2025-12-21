@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {changePage, changePageSize, getUsersData} from "../../state/usersSlice.js";
+import {changePage, changePageSize, getUsersData, follow, unFollow} from "../../state/usersSlice.js";
 import {useDispatch, useSelector} from "react-redux";
 import User from "./User/User.jsx";
 import UsersToolkit from "./UsersToolkit.jsx";
@@ -29,6 +29,14 @@ const UsersContainerToolkit = () => {
   const onChangePageSize = (size) => {
     dispatch(changePageSize(size));
   }
+  
+  const onFollow = (userId) => {
+    dispatch(follow({userId}));
+  }
+
+  const onUnfollow = (userId) => {
+    dispatch(unFollow({userId}));
+  }
 
   return (
     <div>
@@ -39,6 +47,8 @@ const UsersContainerToolkit = () => {
                     onChangePage={onChangePage}
                     pageSizes={usersData.pageSizes}
                     onChangePageSize ={onChangePageSize}
+                    follow={onFollow}
+                    unFollow={onUnfollow}
       />
     </div>
   );

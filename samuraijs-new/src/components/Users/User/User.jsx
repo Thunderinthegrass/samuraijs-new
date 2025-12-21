@@ -2,7 +2,7 @@ import React from "react";
 import s from "./User.module.css";
 import userImage from "../../../assets/images.png";
 
-const User = ({name, photos}) => {
+const User = ({name, photos, followed, userId, follow, unFollow}) => {
   // debugger
   return (
     <div className={s.user}>
@@ -16,11 +16,11 @@ const User = ({name, photos}) => {
         {/*<div className={s.userInfoItem}><span className={s.punkt}>Город: </span>{props.data.location.locality}</div>*/}
         {/*<div className={s.userInfoItem}><span className={s.punkt}>Адрес: </span>{props.data.location.address}</div>*/}
       </div>
-      {/*{props.data.followed ? (*/}
-      {/*  <button className={s.followBtn} onClick={() => props.unFollow(props.id) } >Отписаться</button>*/}
-      {/*) : (*/}
-      {/*  <button className={s.followBtn} onClick={() => props.follow(props.id) } >Подписаться</button>*/}
-      {/*)}*/}
+      {followed ? (
+        <button className={s.followBtn} onClick={() => unFollow(userId) }>Отписаться</button>
+      ) : (
+        <button className={s.followBtn} onClick={() => follow(userId) } >Подписаться</button>
+      )}
     </div>
   )
 }
